@@ -1,13 +1,13 @@
 FROM amazonlinux:2
 
 # aws namespaceid that sync's with consul
-ARG aws_namespace_id=ns-fjmsnikh7zrvm3ie
+ENV aws_namespace_id "ns-fjmsnikh7zrvm3ie"
 
 # consul datacenter to sync with aws
-ARG data_center=dc1
+ENV data_center "dc1"
 
 # consul DNS
-ARG consul_dns=http://3.92.18.101:8500
+ENV consul_dns "http://3.92.18.101:8500"
 
 WORKDIR /usr/local/bin
 RUN yum install unzip -y
