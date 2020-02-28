@@ -14,4 +14,4 @@ RUN yum install unzip -y
 ADD https://releases.hashicorp.com/consul-aws/0.1.1/consul-aws_0.1.1_linux_amd64.zip .
 RUN unzip consul-aws_0.1.1_linux_amd64.zip
 
-ENTRYPOINT ["consul-aws", "sync-catalog", "-datacenter=$data_center", "-http-addr=$consul_dns", "-aws-namespace-id", $aws_namespace_id, "-to-consul", "-to-aws"]
+ENTRYPOINT ["consul-aws", "sync-catalog", "-datacenter=$data_center", "-http-addr=$consul_dns", "-aws-namespace-id", "$aws_namespace_id", "-to-consul", "-to-aws"]
