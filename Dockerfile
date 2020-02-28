@@ -1,7 +1,7 @@
 FROM amazonlinux:2
 
 WORKDIR /usr/local/bin
-RUN yum install wget unzip -y
+RUN yum install unzip -y
 ADD https://releases.hashicorp.com/consul-aws/0.1.1/consul-aws_0.1.1_linux_amd64.zip .
 RUN unzip consul-aws_0.1.1_linux_amd64.zip
 
